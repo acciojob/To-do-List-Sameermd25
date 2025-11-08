@@ -14,13 +14,13 @@
     <ol id="todoList"></ol>
 	<script>
 		const ol=document.getElementById("todoList");
-const btn=document.getElementById("addTodoBtn");
-const input=document.getElementById("newTodoInput");
+		const btn=document.getElementById("addTodoBtn");
+		const input=document.getElementById("newTodoInput");
 
 btn.addEventListener("click",()=>{
-	if (text !== "") { // ✅ add only if not empty
+	if (input !== "") { // ✅ add only if not empty
         const li = document.createElement("li");
-        li.innerText = text;
+        li.innerText = input.value;
         ol.appendChild(li);
         input.value = ""; // clear input
       }
