@@ -18,10 +18,13 @@ const btn=document.getElementById("addTodoBtn");
 const input=document.getElementById("newTodoInput");
 
 btn.addEventListener("click",()=>{
-	const li=document.createElement("li");
-	li.innerText=input.value;
-	ol.appendChild(li);
-	input.value=""
+	if (text !== "") { // ✅ add only if not empty
+        const li = document.createElement("li");
+        li.innerText = text;
+        ol.appendChild(li);
+        input.value = ""; // clear input
+      }
+
 })
 
 	</script>
